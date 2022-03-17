@@ -17,6 +17,8 @@
 		0CEAF8BE27DDAB0F0010647E /* ToastTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAF8BD27DDAB0F0010647E /* ToastTestView.swift */; };
 		0CEAF8C027DE15490010647E /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAF8BF27DE15490010647E /* MainPageView.swift */; };
 		0CEAF8C227DE16C30010647E /* RecoNDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAF8C127DE16C30010647E /* RecoNDashboardView.swift */; };
+		0CEAF8C427E2B3CA0010647E /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAF8C327E2B3CA0010647E /* LoginPageView.swift */; };
+		0CEAF8C627E2DC2A0010647E /* RegisterPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAF8C527E2DC2A0010647E /* RegisterPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		0CEAF8BD27DDAB0F0010647E /* ToastTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastTestView.swift; sourceTree = "<group>"; };
 		0CEAF8BF27DE15490010647E /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		0CEAF8C127DE16C30010647E /* RecoNDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoNDashboardView.swift; sourceTree = "<group>"; };
+		0CEAF8C327E2B3CA0010647E /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
+		0CEAF8C527E2DC2A0010647E /* RegisterPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				0CEAF8B227DDA8FE0010647E /* Healthy.xcdatamodeld */,
 				0CEAF8AD27DDA8FE0010647E /* Preview Content */,
 				0CEAF8BD27DDAB0F0010647E /* ToastTestView.swift */,
+				0CEAF8C327E2B3CA0010647E /* LoginPageView.swift */,
+				0CEAF8C527E2DC2A0010647E /* RegisterPageView.swift */,
 			);
 			path = Healthy;
 			sourceTree = "<group>";
@@ -165,8 +171,10 @@
 				0CEAF8AA27DDA8FD0010647E /* ContentView.swift in Sources */,
 				0CEAF8C027DE15490010647E /* MainPageView.swift in Sources */,
 				0CEAF8A827DDA8FD0010647E /* HealthyApp.swift in Sources */,
+				0CEAF8C627E2DC2A0010647E /* RegisterPageView.swift in Sources */,
 				0CEAF8BE27DDAB0F0010647E /* ToastTestView.swift in Sources */,
 				0CEAF8B427DDA8FE0010647E /* Healthy.xcdatamodeld in Sources */,
+				0CEAF8C427E2B3CA0010647E /* LoginPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
