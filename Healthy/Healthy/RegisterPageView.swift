@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import AlertToast
 private var icons = ["AppleIcon", "GoogleIcon", "FacebookIcon"]
+private var account_usernames = [String]()
 
-
+//let account = Account(context: context)
 
 struct RegisterPageView: View {
 
+//    let account = Account(context: viewContext)
     var body: some View {
         ZStack {
 //            LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .top, endPoint: .bottom)
@@ -30,7 +33,7 @@ struct RegisterPageView: View {
     //                .shadow(radius: 20)
 //                    .padding(.bottom, 50)
                 Spacer()
-                TextFields(text: "First name", textField_text:"Enter your")
+                TextFields(text: "First name", textField_text:"Enter your firstname")
 //                VStack(alignment:.leading, spacing:0) {
 //                    Text("Username")
 //                        .padding(.leading, 15)
@@ -48,31 +51,26 @@ struct RegisterPageView: View {
 //                    .cornerRadius(10)
 //                    .padding([.trailing, .leading], 5)
 //                    .shadow(radius: 10)
+                TextFields(text: "Mobile number", textField_text: "Enter your mobile number")
+                PasswordField()
+                SubmitButton()
+                    .padding([.top, .bottom], 25)
+                BottomNav()
+                Spacer()
                 }
     //                .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(Color.white))
     //                .padding(.all,5)
-            PasswordField()
-                HStack(spacing: 3){
-                    Text("Forget password?")
-                    Text("click here")
-                        .underline()
-                        .foregroundColor(Color.blue)
-                }
-                Spacer()
-    //                .padding(.all, 5)
-                Button(action: {
-                    
-                }){
-                   Text("Sign in")
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .padding([.leading, .trailing], 30)
-                }
-                .background(Color.blue)
-                .cornerRadius(15)
-                .shadow(radius: 10)
-                Spacer()
-                BottomNav()
+            
+//                HStack(spacing: 3){
+//                    Text("Forget password?")
+//                    Text("click here")
+//                        .underline()
+//                        .foregroundColor(Color.blue)
+//                }
+//                Spacer()
+//    //                .padding(.all, 5)
+//                Spacer()
+//                BottomNav()
             }
             .background(Image("Health_Walp"))
         }
@@ -88,19 +86,21 @@ struct RegisterPageView_Previews: PreviewProvider {
 struct BottomNav: View {
     var body: some View {
         VStack {
-            HStack{
-                Text("Don't have account?")
-                Text("Sign up")
-                    .underline()
-                    .foregroundColor(Color.blue)
-            }
+//            HStack{
+//                Text("Don't have account?")
+//                Text("Sign up")
+//                    .underline()
+//                    .foregroundColor(Color.blue)
+//            }
             HStack{
                 ForEach(icons, id:\.self){ icon in
-                    Image("\(icon)")
+                    Button(action:{}){
+                        Image("\(icon)")
                         .resizable()
                         .renderingMode(.original)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 70, height: 50)
+                    }
                 }
                 //                        Image("AppleIcon")
                 //                            .resizable()
@@ -121,6 +121,7 @@ struct TextFields: View {
     @State var last_name:String = ""
     var text:String
     var textField_text:String
+//    var username_text:String
     var body: some View {
         VStack(alignment:.leading, spacing:0) {
             Text(text)
@@ -138,8 +139,16 @@ struct TextFields: View {
             .cornerRadius(10)
             .padding([.trailing, .leading], 5)
             .shadow(radius: 10)
+//            username_text = username
+//            account_usernames.append(username)
         }
     }
+//    add_items(username_text)
+}
+
+func add_items(_ username: String){
+    account_usernames.append(username)
+    print(account_usernames)
 }
 
 struct PasswordField: View {
@@ -165,5 +174,34 @@ struct PasswordField: View {
             .padding([.trailing, .leading], 5)
             .shadow(radius: 10)
         }
+    }
+}
+
+struct SubmitButton: View {
+    @State private var showToast = false
+    @State private var show = false
+    var body: some View {
+            VStack {
+                Button(action: {
+                    showToast.toggle()
+//                    show = true
+                }){
+                    Text("Create account")
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .padding([.leading, .trailing], 30)
+                }
+                .background(Color.blue)
+                .cornerRadius(15)
+            .shadow(radius: 10)
+            }
+            .toast(isPresenting: $showToast, duration: 3, tapToDismiss: false){
+                AlertToast(displayMode: .hud ,type: .regular, title: "Account created!")
+        }
+//        if show {
+//            RegisterPageView()
+//        } else {
+//            LoginPageView()
+//        }
     }
 }
