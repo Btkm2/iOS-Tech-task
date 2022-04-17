@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C42DB1D2802E53000A2F79C /* Main.py in Resources */ = {isa = PBXBuildFile; fileRef = 0C42DB1C2802E53000A2F79C /* Main.py */; };
 		0CEAF8A827DDA8FD0010647E /* HealthyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAF8A727DDA8FD0010647E /* HealthyApp.swift */; };
 		0CEAF8AA27DDA8FD0010647E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAF8A927DDA8FD0010647E /* ContentView.swift */; };
 		0CEAF8AC27DDA8FE0010647E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEAF8AB27DDA8FE0010647E /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C42DB1C2802E53000A2F79C /* Main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = Main.py; sourceTree = "<group>"; };
 		0CEAF8A427DDA8FD0010647E /* Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEAF8A727DDA8FD0010647E /* HealthyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyApp.swift; sourceTree = "<group>"; };
 		0CEAF8A927DDA8FD0010647E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				0CEAF8BD27DDAB0F0010647E /* ToastTestView.swift */,
 				0CEAF8C327E2B3CA0010647E /* LoginPageView.swift */,
 				0CEAF8C527E2DC2A0010647E /* RegisterPageView.swift */,
+				0C42DB1C2802E53000A2F79C /* Main.py */,
 			);
 			path = Healthy;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C42DB1D2802E53000A2F79C /* Main.py in Resources */,
 				0CEAF8AF27DDA8FE0010647E /* Preview Assets.xcassets in Resources */,
 				0CEAF8AC27DDA8FE0010647E /* Assets.xcassets in Resources */,
 			);

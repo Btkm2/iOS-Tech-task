@@ -13,53 +13,59 @@ struct LoginPageView: View {
     @State private var show = false
     @State var password:String = ""
     var body: some View {
-        ZStack {
-//            LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .top, endPoint: .bottom)
-//                            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            VStack{
-                Spacer()
-                Text("Sign in")
-                    .font(.system(size: 25, weight: .semibold, design: .default))
-//                Image("HeartBeat_2")
-//                    .resizable()
-//                    .renderingMode(.original)
-//                    .aspectRatio(contentMode: .fit)
-//                    .frame(width: UIScreen.main.bounds.width*0.87, height: UIScreen.main.bounds.height*0.4)
-//                    .cornerRadius(30)
-//                    .shadow(color: Color.black.opacity(0.3), radius: 30, x: 0, y: 0)
-    //                .shadow(radius: 20)
-//                    .padding(.bottom, 50)
-                Spacer()
-//                TextFields(text: "First name", textField_text:"Enter your")
-                Text_field(text: "Username", textField_text: "Enter your username")
-    //                .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(Color.white))
-    //                .padding(.all,5)
-                Pass_field()
-                ForgetPass()
-                Spacer()
-    //                .padding(.all, 5)
-//                Btn_tgl()
-                Button(action: {
-                    show.toggle()
-                }){
+        NavigationView {
+            ZStack {
+    //            LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .top, endPoint: .bottom)
+    //                            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                VStack{
+                    Spacer()
                     Text("Sign in")
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .padding([.leading, .trailing], 30)
+                        .font(.system(size: 25, weight: .semibold, design: .default))
+    //                Image("HeartBeat_2")
+    //                    .resizable()
+    //                    .renderingMode(.original)
+    //                    .aspectRatio(contentMode: .fit)
+    //                    .frame(width: UIScreen.main.bounds.width*0.87, height: UIScreen.main.bounds.height*0.4)
+    //                    .cornerRadius(30)
+    //                    .shadow(color: Color.black.opacity(0.3), radius: 30, x: 0, y: 0)
+        //                .shadow(radius: 20)
+    //                    .padding(.bottom, 50)
+                    Spacer()
+    //                TextFields(text: "First name", textField_text:"Enter your")
+                    Text_field(text: "Username", textField_text: "Enter your username")
+        //                .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(Color.white))
+        //                .padding(.all,5)
+                    Pass_field()
+                    ForgetPass()
+                    Spacer()
+        //                .padding(.all, 5)
+    //                Btn_tgl()
+    //                Button(action: {
+    ////                    show.toggle()
+    //                }){
+    //                    Text("Sign in")
+    //                        .foregroundColor(Color.white)
+    //                        .padding()
+    //                        .padding([.leading, .trailing], 30)
+    //                }
+    //                .background(Color.blue)
+    //                .cornerRadius(15)
+    //                .shadow(radius: 10)
+    //                if show {
+    //                    RegisterPageView()
+    //                } else {
+    //                    LoginPageView()
+    //                }
+                    NavigationLink("Press me", destination: RegisterPageView()
+                                    .ignoresSafeArea(.all))
+                    Spacer()
+    //                Bottom_Navigation()
                 }
-                .background(Color.blue)
-                .cornerRadius(15)
-                .shadow(radius: 10)
-                if show {
-                    RegisterPageView()
-                } else {
-                    LoginPageView()
-                }
-                Spacer()
-//                Bottom_Navigation()
+                .background(Image("Health_Walp"))
             }
-            .background(Image("Health_Walp"))
-        }//.background(Color.red)
+            .ignoresSafeArea(.all)
+        }.ignoresSafeArea(.all)
+        //.background(Color.red)
 //            .edgesIgnoringSafeArea(.all)
 //        .background(Image("Health_Walp"))
     }

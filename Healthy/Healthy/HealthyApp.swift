@@ -15,8 +15,8 @@ struct HealthyApp: App {
         WindowGroup {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            //LoginPageView()
-            RegisterPageView()
+            LoginPageView()
+//            RegisterPageView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
