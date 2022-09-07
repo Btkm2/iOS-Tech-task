@@ -72,7 +72,7 @@ struct RegisterPageView: View {
 //                Spacer()
 //                BottomNav()
             }
-            .background(Image("Health_Walp"))
+//            .background(Image("Health_Walp"))
         }
     
 }
@@ -99,7 +99,7 @@ struct BottomNav: View {
                         .resizable()
                         .renderingMode(.original)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 70, height: 50)
+                        .frame(width: 44, height: 44)
                     }
                 }
                 //                        Image("AppleIcon")
@@ -162,16 +162,18 @@ struct PasswordField: View {
             //                    SecureField("Password",text:$password)
             //                        .padding([.leading, .bottom, .trailing])
             //                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            HStack {
-                Image(systemName: "person").foregroundColor(.gray)
+//            HStack {
+//                Image(systemName: "person").foregroundColor(.gray)
                 SecureField("Enter your password", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
-            .padding()
-            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
-            .background(Color.white)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//            }
+                .textFieldStyle(DefaultTextFieldStyle())
+            .frame(width: UIScreen.main.bounds.width*0.95, height: 50)
+            .padding(.all, 10)
+//            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+//            .background(Color.white)
             .cornerRadius(10)
-            .padding([.trailing, .leading], 5)
+//            .padding([.trailing, .leading], 5)
             .shadow(radius: 10)
         }
     }
@@ -192,7 +194,7 @@ struct SubmitButton: View {
                         .padding([.leading, .trailing], 30)
                 }
                 .background(Color.blue)
-                .cornerRadius(15)
+                .cornerRadius(5)
             .shadow(radius: 10)
             }
             .toast(isPresenting: $showToast, duration: 3, tapToDismiss: false){

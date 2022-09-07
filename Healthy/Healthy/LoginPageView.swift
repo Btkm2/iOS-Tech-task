@@ -93,9 +93,12 @@ struct Text_field: View {
                 Image(systemName: "person").foregroundColor(.gray)
                 TextField(textField_text, text: $username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .foregroundColor(Color.white)
+                    .statusBar(hidden: false)
             }
+            
             .padding()
-            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 1))
             .background(Color.white)
             .cornerRadius(10)
             .padding([.trailing, .leading], 5)
